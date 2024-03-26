@@ -33,8 +33,8 @@ stdenv.mkDerivation rec {
 	src = fetchFromGitHub {
 		owner = "Kamillaova";
 		repo = "weston-imx";
-		rev = "a1f2b025a4b28e47cd95c0f75fe4433b87c81851";
-		hash = "sha256-nnREua8oZy9EXTPhDmerSBlCtzMs6GXlnNp1YbjtNJc=";
+		rev = "ee6fab9b4012b8598188708bf12925d8251b1440";
+		hash = "sha256-pAqZqWNkIbqLM8/MQpQbLA1g2yfJTMkgNWJ9EXup3Gg=";
 	};
 
 	patches = [
