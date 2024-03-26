@@ -12,6 +12,7 @@
 , xcbutilcursor
 , imx-gpu-viv
 , imx-gpu-g2d
+, dbus
 
 , demoSupport ? true
 , hdrSupport ? true, libdisplay-info
@@ -55,7 +56,7 @@ stdenv.mkDerivation rec {
 		libevdev libinput
 		seatd libxkbcommon
 		imx-gpu-viv
-		imx-gpu-g2d
+		imx-gpu-g2d dbus
 	] ++ lib.optional hdrSupport libdisplay-info
 		++ lib.optional jpegSupport libjpeg
 		++ lib.optional lcmsSupport lcms2
