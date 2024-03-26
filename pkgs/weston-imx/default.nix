@@ -28,13 +28,13 @@
 }:
 stdenv.mkDerivation rec {
 	pname = "weston-imx";
-	version = "lf-6.6.3-1.0.0";
+	version = "10.0.0";
 
 	src = fetchFromGitHub {
-		owner = "Kamillaova";
+		owner = "nxp-imx";
 		repo = "weston-imx";
-		rev = "f4f9effcb53a2b5f5df66b1b89772ab8026b97ba";
-		hash = "sha256-KsKXjyvb2cfRmdvjOZuaalPF9UOGHSdXntvf6xU8P2c=";
+		rev = version;
+		hash = "sha256-AxppkUZBJx9C964HjJKJzMRfQsxX8WREXfZvx//hOjo=";
 	};
 
 	patches = [
