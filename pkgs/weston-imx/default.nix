@@ -31,10 +31,10 @@ stdenv.mkDerivation rec {
 	version = "lf-6.6.3-1.0.0";
 
 	src = fetchFromGitHub {
-		owner = "nxp-imx";
+		owner = "Kamillaova";
 		repo = "weston-imx";
-		rev = version;
-		hash = "sha256-SjioGPHZe8q5sNjfWPiTwxGhtTn2qYq1+CbEhXrlRzw=";
+		rev = "f069fc77f6017f6bc6534eb970922d48ed3b8c2f";
+		hash = "sha256-STpSh+tdsWOy7riD0DflHLBUfEelYNJ2cZ1Q8ohc170=";
 	};
 
 	patches = [
