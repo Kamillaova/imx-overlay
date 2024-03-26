@@ -19,7 +19,7 @@
 , lcmsSupport ? true, lcms2
 , pangoSupport ? true, pango
 , pipewireSupport ? true, pipewire
-, remotingSupport ? true, gst_all_1
+, remotingSupport ? false, gst_all_1
 , vncSupport ? true, aml, neatvnc, pam
 , rdpSupport ? true, freerdp
 , vaapiSupport ? true, libva
