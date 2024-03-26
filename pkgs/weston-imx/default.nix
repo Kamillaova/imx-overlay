@@ -35,8 +35,8 @@ stdenv.mkDerivation rec {
 	src = fetchFromGitHub {
 		owner = "nxp-imx";
 		repo = "weston-imx";
-		rev = version;
-		hash = "sha256-AxppkUZBJx9C964HjJKJzMRfQsxX8WREXfZvx//hOjo=";
+		rev = "c8c6e3106b03441db1037afa995f95fcb2f9f17d";
+		hash = "sha256-V8LI29YWKZRy4dD7FtGPgohJ+E/AQHLKtcN2oMKaldQ=";
 	};
 
 #	patches = [
