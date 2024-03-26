@@ -79,6 +79,7 @@ stdenv.mkDerivation rec {
 		(lib.mesonBool "backend-rdp" rdpSupport)
 #		(lib.mesonBool "backend-vnc" vncSupport)
 		(lib.mesonBool "color-management-lcms" lcmsSupport)
+		(lib.mesonBool "color-management-colord" false)
 		(lib.mesonBool "demo-clients" demoSupport)
 		(lib.mesonBool "image-jpeg" jpegSupport)
 		(lib.mesonBool "image-webp" webpSupport)
