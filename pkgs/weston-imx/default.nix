@@ -13,11 +13,12 @@
 , imx-gpu-viv
 , imx-gpu-g2d
 , dbus
+, colord
 
 , demoSupport ? true
-, hdrSupport ? true, libdisplay-info
+, hdrSupport ? false, libdisplay-info
 , jpegSupport ? true, libjpeg
-, lcmsSupport ? true, lcms2
+, lcmsSupport ? false, lcms2
 , pangoSupport ? true, pango
 , pipewireSupport ? false, pipewire
 , remotingSupport ? false, gst_all_1
@@ -56,7 +57,7 @@ stdenv.mkDerivation rec {
 		libevdev libinput
 		seatd libxkbcommon
 		imx-gpu-viv
-		imx-gpu-g2d dbus
+		imx-gpu-g2d dbus colord
 	] ++ lib.optional hdrSupport libdisplay-info
 		++ lib.optional jpegSupport libjpeg
 		++ lib.optional lcmsSupport lcms2
