@@ -20,7 +20,7 @@
 , pangoSupport ? true, pango
 , pipewireSupport ? false, pipewire
 , remotingSupport ? false, gst_all_1
-, vncSupport ? true, aml, neatvnc, pam
+#, vncSupport ? true, aml, neatvnc, pam
 , rdpSupport ? true, freerdp
 , vaapiSupport ? false, libva
 , webpSupport ? true, libwebp
@@ -37,15 +37,15 @@ stdenv.mkDerivation rec {
 		hash = "sha256-AxppkUZBJx9C964HjJKJzMRfQsxX8WREXfZvx//hOjo=";
 	};
 
-	patches = [
-		# ci, backend-vnc: update to Neat VNC 0.7.0
-		# part of https://gitlab.freedesktop.org/wayland/weston/-/merge_requests/1051
-		(fetchpatch2 {
-			url = "https://gitlab.freedesktop.org/wayland/weston/-/commit/8895b15f3dfc555a869e310ff6e16ff5dced1336.patch";
-			hash = "sha256-PGAmQhzG8gZcYRaZwhKPlgzfbILIXGAHLSd9dCHAP1A=";
-			excludes = [ ".gitlab-ci.yml" ];
-		})
-	];
+#	patches = [
+#		# ci, backend-vnc: update to Neat VNC 0.7.0
+#		# part of https://gitlab.freedesktop.org/wayland/weston/-/merge_requests/1051
+#		(fetchpatch2 {
+#			url = "https://gitlab.freedesktop.org/wayland/weston/-/commit/8895b15f3dfc555a869e310ff6e16ff5dced1336.patch";
+#			hash = "sha256-PGAmQhzG8gZcYRaZwhKPlgzfbILIXGAHLSd9dCHAP1A=";
+#			excludes = [ ".gitlab-ci.yml" ];
+#		})
+#	];
 
 	depsBuildBuild = [ pkg-config ];
 	nativeBuildInputs = [ meson ninja python3 wayland-scanner ];
@@ -64,7 +64,7 @@ stdenv.mkDerivation rec {
 		++ lib.optional rdpSupport freerdp
 		++ lib.optionals remotingSupport [ gst_all_1.gstreamer gst_all_1.gst-plugins-base ]
 		++ lib.optional vaapiSupport libva
-		++ lib.optionals vncSupport [ aml neatvnc pam ]
+#		++ lib.optionals vncSupport [ aml neatvnc pam ]
 		++ lib.optional webpSupport libwebp
 		++ lib.optionals xwaylandSupport [ libXcursor xcbutilcursor xwayland ];
 
@@ -75,7 +75,7 @@ stdenv.mkDerivation rec {
 		(lib.mesonBool "backend-drm-screencast-vaapi" vaapiSupport)
 		(lib.mesonBool "backend-pipewire" pipewireSupport)
 		(lib.mesonBool "backend-rdp" rdpSupport)
-		(lib.mesonBool "backend-vnc" vncSupport)
+#		(lib.mesonBool "backend-vnc" vncSupport)
 		(lib.mesonBool "color-management-lcms" lcmsSupport)
 		(lib.mesonBool "demo-clients" demoSupport)
 		(lib.mesonBool "image-jpeg" jpegSupport)
