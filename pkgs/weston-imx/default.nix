@@ -69,7 +69,6 @@ stdenv.mkDerivation rec {
 		++ lib.optionals xwaylandSupport [ libXcursor xcbutilcursor xwayland ];
 
 	mesonFlags = [
-		(lib.mesonBool "renderer-gl" false)
 		(lib.mesonBool "test-junit-xml" false)
 		(lib.mesonBool "backend-drm-screencast-vaapi" vaapiSupport)
 		(lib.mesonBool "backend-pipewire" pipewireSupport)
