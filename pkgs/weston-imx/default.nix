@@ -73,7 +73,7 @@ stdenv.mkDerivation rec {
 #		(lib.mesonBool "renderer-gl" false)
 		(lib.mesonBool "test-junit-xml" false)
 		(lib.mesonBool "backend-drm-screencast-vaapi" vaapiSupport)
-		(lib.mesonBool "backend-pipewire" pipewireSupport)
+#		(lib.mesonBool "backend-pipewire" pipewireSupport)
 		(lib.mesonBool "backend-rdp" rdpSupport)
 #		(lib.mesonBool "backend-vnc" vncSupport)
 		(lib.mesonBool "color-management-lcms" lcmsSupport)
