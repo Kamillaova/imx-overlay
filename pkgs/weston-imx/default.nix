@@ -22,7 +22,7 @@
 , remotingSupport ? false, gst_all_1
 , vncSupport ? true, aml, neatvnc, pam
 , rdpSupport ? true, freerdp
-, vaapiSupport ? true, libva
+, vaapiSupport ? false, libva
 , webpSupport ? true, libwebp
 , xwaylandSupport ? true, xwayland, libXcursor
 }:
