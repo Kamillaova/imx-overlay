@@ -18,13 +18,13 @@
 stdenv.mkDerivation rec {
 	pname = "imx-gpu-viv";
 	version = "6.4.3.p4.2";
-src = /tmp/x/imx-gpu-viv-6.4.3.p4.2-aarch64;
-#	src = fetchurl {
-#		url = "https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/${pname}-${version}-aarch64.bin";
-#		hash = "sha256-UpIcC1lSnxWYCE6ZHtoYYxAHVPKKd0S6lYFY3/gHSzs=";
-#	};
 
-#	unpackCmd = "sh $curSrc --auto-accept"; # https://www.nxp.com/docs/en/disclaimer/LA_OPT_NXP_SW.html
+	src = fetchurl {
+		url = "https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/${pname}-${version}-aarch64.bin";
+		hash = "sha256-UpIcC1lSnxWYCE6ZHtoYYxAHVPKKd0S6lYFY3/gHSzs=";
+	};
+
+	unpackCmd = "sh $curSrc --auto-accept"; # https://www.nxp.com/docs/en/disclaimer/LA_OPT_NXP_SW.html
 
 	nativeBuildInputs = [ autoPatchelfHook ];
 	buildInputs = [ stdenv.cc.cc.lib libdrm wayland ];
